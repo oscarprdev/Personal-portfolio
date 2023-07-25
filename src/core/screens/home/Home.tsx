@@ -9,6 +9,7 @@ function Home() {
             <b>My background comes from working 6 years as Automotive Industrial Engineer </b>
             but my passion & curiosity for creating things from scratch has led me to become a web developer after completing a full stack bootcamp last year.
         </p>
+        <span className={styles.infinity}></span>
     </section>
 }
 
