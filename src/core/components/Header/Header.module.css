@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5rem 2rem;
+}
+
+h1 {
+    color: var(--contrast-primary-light);
+}
+
+.headerLogos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logoContainer {
+    width: clamp(0.5rem, 5vw, 3rem);
+}
+
+.logoContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.headerNav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navLInk {
+    font-size: clamp(1rem, 10vw, 2rem);
+    font-weight: bold;
+
+    color: var(--color-disabled);
+    text-decoration-line: line-through;
+}
+
+.navLInkActive {
+    font-size: clamp(1rem, 10vw, 2rem);
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease-in;
+}
+
+.navLInkActive:hover {
+    color: var(--contrast-primary-light);
+}

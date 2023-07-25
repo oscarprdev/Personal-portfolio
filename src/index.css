@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'brolimo';
+    src: url('./assets/fonts/brolimo/BROLIMO-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'subjectivity';
+    src: url('./assets/fonts/subjectivity/Subjectivity-Light.otf') format('opentype');
+}
+
+:root {
+    --bg-dark: #252525;
+
+    --contrast-primary: #FF6000;
+    --contrast-primary-light: #FFA559;
+    --contrast-secondary-light: #FFE6C7;
+
+    --contrast-terciary-light: #75C2F6;
+
+    --color-light: #fff;
+    --color-disabled: #e2e2e2;
+}
+
+body {
+    font-family: subjectivity;
+    background-color: var(--bg-dark);
+    color: var(--color-light)
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: brolimo;
+}
+
