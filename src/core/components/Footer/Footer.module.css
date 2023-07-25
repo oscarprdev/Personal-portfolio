@@ -4,8 +4,8 @@
     justify-content: center;
     gap: 2rem;
 
-    width: 100%;
-    margin: 0 auto;
+    padding: 3rem;
+    margin-top: auto;
 }
 
 .footer p {

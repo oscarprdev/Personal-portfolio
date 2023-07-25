@@ -8,6 +8,11 @@
     src: url('./assets/fonts/subjectivity/Subjectivity-Light.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'merry';
+    src: url('./assets/fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+}
+
 :root {
     --bg-dark: #252525;
 
@@ -22,9 +27,18 @@
 }
 
 body {
-    font-family: subjectivity;
+    font-family: merry;
     background-color: var(--bg-dark);
-    color: var(--color-light)
+    color: var(--color-light);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    height: 100%;
 }
 
 a {

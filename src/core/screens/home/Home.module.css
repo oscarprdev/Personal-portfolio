@@ -1,6 +1,9 @@
 .home {
     width: clamp(20rem, 60vw, 60rem);
-    margin: 0 auto;
+    margin: auto;
+    display: grid;
+    place-items: center;
+
     padding: 0 0 5rem;
 }
 
