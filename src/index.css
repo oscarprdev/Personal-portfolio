@@ -15,6 +15,7 @@
 
 :root {
     --bg-dark: #252525;
+    --bg-dark-light: #343434;
 
     --contrast-primary: #FF6000;
     --contrast-primary-light: #FFA559;
@@ -43,6 +44,20 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: start;
+    flex-grow: 1;
+}
+
+section {
+    width: clamp(20rem, 55vw, 50rem);
+    margin: auto;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 0 2rem;
     flex-grow: 1;
 }
 

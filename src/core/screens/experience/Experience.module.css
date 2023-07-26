@@ -1,0 +1,99 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    max-width: clamp(15rem, 50vw, 30rem);
+    border-left: 1px solid var(--contrast-primary-light);
+}
+
+.work {
+    position: relative;
+    width: 100%;
+
+    height: fit-content;
+
+    transition: all 0.6s ease;
+}
+
+.work:hover {
+    background-color: var(--bg-dark-light);
+}
+
+.work:hover .job h3 {
+    color: var(--contrast-primary-light)
+}
+
+.work:hover .job p {
+    color: var(--contrast-secondary-light)
+}
+
+.work:hover .balloon {
+    background-color: var(--contrast-primary-light);
+    color: var(--bg-dark);
+}
+
+.work::after {
+    content: "";
+    width: clamp(5rem, 15vw, 7rem);
+    height: 0.05rem;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    background-color: var(--contrast-primary-light);
+}
+
+.period {
+    position: absolute;
+    top: 0;
+    left: 1.3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end
+}
+
+.balloon {
+    position: absolute;
+    top: 2rem;
+    left: -2.3rem;
+
+    display: grid;
+    place-items: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    transition: all 0.6s ease;
+
+
+    z-index: 1;
+
+    background-color: var(--bg-dark);
+    border-radius: 50%;
+    border: 1px solid var(--contrast-primary-light);
+}
+
+.period p {
+    margin-top: clamp(1.5rem, 1rem, 0.5rem);
+    font-size: clamp(0.5rem, 2vw, 0.8rem);
+    color: var(--color-disabled);
+    line-height: 0.4rem;
+}
+
+.job {
+    margin-left: clamp(6rem, 20vw, 9rem);
+    transition: all 0.6s ease;
+
+}
+
+.job h3 {
+    font-size: clamp(0.3rem, 4vw, 1.3rem);
+    text-transform: uppercase;
+    max-width: 50vw;
+}
+
+.job p {
+    width: clamp(10rem, 30vw, 25rem);
+    font-style: italic;
+    font-size: clamp(0.4rem, 3vw, 0.8rem)
+}

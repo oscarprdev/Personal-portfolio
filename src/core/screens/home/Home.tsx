@@ -2,7 +2,7 @@ import styles from './Home.module.css'
 function Home() {
     return <section className={styles.home}>
         <p className={styles.text}>
-            My name is <span className={styles.name}>Oscar Perez Romero</span>  &
+            My name is <span className={styles.name}>Oscar Perez Romero</span>  and
             I'm currently working as <span className={styles.work}>Frontend Developer</span> at <a href="https://www.adhara.io/" target="_blank" className={styles.company}>Adhara</a> since 2022.
             <br></br>
             <br></br>

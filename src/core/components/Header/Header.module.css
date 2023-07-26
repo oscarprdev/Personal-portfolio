@@ -9,6 +9,7 @@
 
 h1 {
     color: var(--contrast-primary-light);
+    cursor: pointer;
 }
 
 .headerLogos {
@@ -30,11 +31,11 @@ h1 {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-right: 2.1rem;
+    margin-right: clamp(0rem, 5vw, 2.1rem);
 }
 
 .navLInk {
-    font-size: clamp(1rem, 10vw, 2rem);
+    font-size: clamp(1rem, 5vw, 2rem);
     font-weight: bold;
 
     color: var(--color-disabled);
@@ -42,7 +43,7 @@ h1 {
 }
 
 .navLInkActive {
-    font-size: clamp(1rem, 10vw, 2rem);
+    font-size: clamp(1rem, 5vw, 2rem);
     font-weight: bold;
 
     cursor: pointer;
@@ -52,4 +53,14 @@ h1 {
 
 .navLInkActive:hover {
     color: var(--contrast-primary-light);
+}
+
+.navLinkSelected {
+    color: var(--contrast-primary-light);
+    text-decoration-line: underline;
+}
+
+.navLinkSelected:hover {
+    color: var(--color-light);
+    text-decoration-line: underline;
 }

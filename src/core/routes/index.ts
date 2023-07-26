@@ -1,5 +1,6 @@
 export const routes = {
     default: "/",
     about: '/about',
-    blog: '/blog'
+    blog: '/blog',
+    experience: '/experience'
 }
