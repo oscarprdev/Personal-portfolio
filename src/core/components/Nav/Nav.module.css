@@ -1,0 +1,47 @@
+.nav {
+    width: 35vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    gap: 0;
+
+    padding: 3rem 0;
+
+    flex-grow: 1;
+}
+
+.nav h1 {
+    position: relative;
+
+    line-height: 0;
+    font-size: 3.5rem;
+
+    text-transform: uppercase;
+    color: var(--contrast-blue);
+    cursor: pointer;
+
+    transition: color 0.5 ease;
+
+}
+
+.nav h1:hover {
+    color: var(--contrast-yellow)
+}
+
+
+.navActive::after {
+    position: absolute;
+    content: "";
+    right: -2rem;
+    top: -0.2rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border-radius: 50%;
+    background-color: var(--contrast-orange);
+}
+
+

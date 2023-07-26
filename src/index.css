@@ -13,23 +13,32 @@
     src: url('./assets/fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
 }
 
+
+
+@font-face {
+    font-family: 'cooper-hewitt';
+    src: url('./assets/fonts/cooper-hewitt/CooperHewitt-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'relieve';
+    src: url('./assets/fonts/relieve/Relieve\ Demo.ttf') format('truetype');
+}
+
 :root {
     --bg-dark: #252525;
-    --bg-dark-light: #343434;
+    --bg-light: #F0F0F0;
 
-    --contrast-primary: #FF6000;
-    --contrast-primary-light: #FFA559;
-    --contrast-secondary-light: #FFE6C7;
+    --color-hello-light: #e5e5e5;
 
-    --contrast-terciary-light: #75C2F6;
-
-    --color-light: #fff;
-    --color-disabled: #e2e2e2;
+    --contrast-orange: #F45050;
+    --contrast-yellow: #F9D949;
+    --contrast-blue: #3C486B;
 }
 
 body {
     font-family: merry;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-light);
     color: var(--color-light);
     overflow: hidden;
 }
@@ -42,24 +51,12 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+    height: 100vh;
     flex-grow: 1;
+
+    scroll-behavior: smooth;
 }
 
-section {
-    width: clamp(20rem, 55vw, 50rem);
-    margin: auto;
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 0 2rem;
-    flex-grow: 1;
-}
 
 a {
     text-decoration: none;
@@ -67,6 +64,8 @@ a {
 }
 
 h1 {
-    font-family: brolimo;
+    font-family: cooper-hewitt;
 }
+
+
 

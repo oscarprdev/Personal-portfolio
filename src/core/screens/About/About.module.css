@@ -1,0 +1,50 @@
+.about {
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    animation: fadein 1s ease;
+}   
+
+.about h2 {
+    position: absolute;
+
+    font-family: relieve;
+    text-transform: uppercase;
+    font-style: italic;
+
+    color: var(--color-hello-light);
+
+    z-index: -1;
+
+    font-size: 15rem;
+}
+
+.about p {
+    max-width: 60%;
+    font-size: 2rem;
+
+    font-family: subjectivity;
+    text-align: justify;
+}
+
+.about span {
+    font-weight: bold;
+    color: var(--contrast-orange);
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
