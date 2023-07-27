@@ -10,6 +10,8 @@
     padding: 3rem 0;
 
     flex-grow: 1;
+
+    position: relative;
 }
 
 .nav h1 {
@@ -19,14 +21,25 @@
     font-size: 3.5rem;
 
     text-transform: uppercase;
-    color: var(--contrast-blue);
+
     cursor: pointer;
 
-    transition: color 0.5 ease;
-
+    transition: color 0.5s ease;
 }
 
-.nav h1:hover {
+.dark {
+    color: var(--color-hello-light)
+}
+
+.dark:hover {
+    color: var(--contrast-blue);
+}
+
+.light {
+    color: var(--contrast-blue);
+}
+
+.light:hover {
     color: var(--contrast-yellow)
 }
 
@@ -35,7 +48,7 @@
     position: absolute;
     content: "";
     right: -2rem;
-    top: -0.2rem;
+    top: -0.5rem;
 
     width: 1.5rem;
     height: 1.5rem;

@@ -1,3 +1,42 @@
 .switch {
-    width: 4rem;
+    position: absolute;
+    top: 0.3rem;
+    right: 5rem;
+    width: 5rem;
+    height: 2.5rem;
+
+    border-radius: 5rem;
+
+    cursor: pointer;
+}
+
+.switchDark {
+    background-color: var(--color-hello-light);
+}
+
+.switchLight {
+    background-color: var(--bg-dark);
+}
+
+.switch span {
+    position: absolute;
+
+    width: 2rem;
+    height: 2rem;
+
+    top: 0.25rem;
+    left: 0.2rem;
+
+    border-radius: 5rem;
+
+    transition: all 0.3s ease;
+}
+
+.dark {
+    background-color: var(--bg-dark);
+}
+
+.light {
+    background-color: var(--contrast-yellow);
+    transform: translateX(2.5rem);
 }

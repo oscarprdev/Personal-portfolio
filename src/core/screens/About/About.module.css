@@ -1,6 +1,7 @@
 .about {
     display: grid;
     place-items: center;
+    opacity: 1;
 
     width: 100%;
     height: 100%;
@@ -8,34 +9,21 @@
     position: relative;
 
     animation: fadein 1s ease;
-}   
-
-.about h2 {
-    position: absolute;
-
-    font-family: relieve;
-    text-transform: uppercase;
-    font-style: italic;
-
-    color: var(--color-hello-light);
-
-    z-index: -1;
-
-    font-size: 15rem;
 }
 
-.about p {
-    max-width: 60%;
-    font-size: 2rem;
+.imgContainer {
+    width: 20rem;
+    height: 20rem;
 
-    font-family: subjectivity;
-    text-align: justify;
+    border-radius: 10rem;
 }
 
-.about span {
-    font-weight: bold;
-    color: var(--contrast-orange);
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
+
 
 @keyframes fadein {
     0% {
