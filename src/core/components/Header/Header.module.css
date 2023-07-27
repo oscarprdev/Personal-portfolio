@@ -3,10 +3,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     padding: 0.5rem 2rem;
-
     position: relative;
+}
+
+.header h1 {
+    display: none;
 }
 
 .header::after {
@@ -14,12 +16,27 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    background-color: var(--contrast-orange);
+    z-index: 1;
+}
 
+/* New styles for the h1 element */
+.header:hover h1 {
+    display: block;
     position: absolute;
     top: 1rem;
     left: 1rem;
-
-    background-color: var(--contrast-orange)
-
+    animation: moveRight 0.2s forwards;
 }
 
+@keyframes moveRight {
+    from {
+        left: -50px; /* Adjust the initial position off the screen as needed */
+    }
+    to {
+        left: 5rem;
+    }
+}

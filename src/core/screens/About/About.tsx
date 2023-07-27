@@ -2,11 +2,12 @@ import styles from "./About.module.css"
 import {useContext} from "react";
 import {ThemeContext} from "../../context/theme.context.tsx";
 import personal from '../../../assets/personal.jpeg'
+import {routes} from "../../routes";
 
 function About() {
     const {isDark} = useContext(ThemeContext)
 
-    return <section className={`${styles.about} ${isDark ? styles.dark : styles.light}`}>
+    return <section id={`${routes.about.path}`} className={`${styles.about} ${isDark ? styles.dark : styles.light}`}>
         <h2>About me</h2>
         <div className={styles.head}>
             <div className={`${styles.imgContainer} ${isDark ? styles.dark : styles.light}`}>

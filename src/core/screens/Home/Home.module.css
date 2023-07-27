@@ -38,6 +38,7 @@
     max-width: 60%;
     font-size: 2rem;
     z-index: 2;
+    text-align: center;
 }
 
 .home span {

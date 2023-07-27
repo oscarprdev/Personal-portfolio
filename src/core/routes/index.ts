@@ -11,10 +11,6 @@ export const routes = {
         path: '/projects',
         label: 'Projects'
     },
-    experience: {
-        path: '/experience',
-        label: 'Experience'
-    },
     blog: {
         path: '/blog',
         label: 'Blog'
