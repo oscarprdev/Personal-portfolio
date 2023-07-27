@@ -1,6 +1,10 @@
 .about {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
     opacity: 1;
 
     width: 100%;
@@ -11,18 +15,138 @@
     animation: fadein 1s ease;
 }
 
-.imgContainer {
-    width: 20rem;
-    height: 20rem;
+.infoText {
+    max-width: 50%;
+    position: inherit;
+    z-index: 2;
 
+    font-size: 1.2rem;
+}
+
+.head {
+    position: relative;
+}
+
+.imgContainer {
+    width: 15rem;
+    height: 15rem;
     border-radius: 10rem;
+
+    z-index: 2;
+}
+
+.dark h2 {
+    color: var(--color-hello-dark);
+}
+
+.light h2 {
+    color: var(--color-hello-light);
+}
+
+.about h2 {
+    position: absolute;
+
+    font-family: relieve;
+    text-transform: uppercase;
+    font-style: italic;
+    opacity: 1;
+
+    z-index: 1;
+
+    font-size: 10rem;
+
+    animation: fadein 1s ease;
+}
+
+.dark .imgContainer {
+    box-shadow: 0 0 10px 10px var(--bg-dark);
+}
+
+.light .imgContainer {
+    box-shadow: 0 0 10px 10px #c1c1c1fc;
 }
 
 .imgContainer img {
     width: 100%;
     height: 100%;
-    background-size: cover;
+    border-radius: 10rem;
+    z-index: 2;
+    position: sticky;
 }
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h3 {
+    font-size: 2.5rem;
+    line-height: 0;
+    color: var(--contrast-orange);
+}
+
+.info p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.dots {
+    display: flex;
+    flex-wrap: wrap;
+    width: 7rem;
+    gap: 1rem;
+
+    position: absolute;
+    top: 0;
+    left: -6rem;
+
+    z-index: 0;
+}
+
+.dots span {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.dotsDark span {
+    background-color: var(--color-hello-light);
+}
+
+.dotsLight span {
+    background-color: var(--contrast-orange);
+}
+
+.dots2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 7rem;
+    gap: 1rem;
+
+    position: absolute;
+    bottom: 7rem;
+    right: 10rem;
+
+    z-index: 1;
+
+}
+
+.dots2 span {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-hello-light);
+    border-radius: 100%;
+}
+
+
+
 
 
 @keyframes fadein {

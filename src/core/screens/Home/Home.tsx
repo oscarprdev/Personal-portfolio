@@ -8,8 +8,8 @@ function Home() {
     return <section className={`${styles.home} ${isDark ? styles.dark : styles.light}`}>
         <h2>Hello</h2>
         <p>
-            I'm <span>Oscar Perez Romero</span>, 
-            with 1 year of experience as <span>frontend developer</span> currently working at 
+            My name is <span>Oscar Perez</span> and I am
+            currently working as <span>frontend developer</span> at
             <span> Adhara</span>
         </p>
     </section>
