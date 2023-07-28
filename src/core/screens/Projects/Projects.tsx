@@ -2,73 +2,100 @@ import styles from './Projects.module.css'
 import {useContext} from "react";
 import {ThemeContext} from "../../context/theme.context.tsx";
 import {routes} from "../../routes";
-import JSIcon from '../../../assets/icons/javascript-svgrepo-com.svg'
-import TSIcon from '../../../assets/icons/typescript-svgrepo-com.svg'
-import AngularIcon from '../../../assets/icons/angular-outlined-svgrepo-com.svg'
-import ReactIcon from '../../../assets/icons/react-svgrepo-com.svg'
-import CssIcon from '../../../assets/icons/css-16-svgrepo-com.svg'
-import SassIcon from '../../../assets/icons/sass-svgrepo-com.svg'
-import SvelteIcon from '../../../assets/icons/svelte-svgrepo-com.svg'
-import TailwindIcon from '../../../assets/icons/tailwind-svgrepo-com.svg'
-import VueIcon from '../../../assets/icons/vue-js-svgrepo-com.svg'
-import JestIcon from '../../../assets/icons/jest-svgrepo-com.svg'
+import {
+    AngularIcon,
+    CssIcon,
+    JavascriptIcon,
+    ReactIcon,
+    SvelteIcon,
+    TailwindIcon,
+    TypescriptIcon,
+} from "../../svg";
+import foroImage from '../../../assets/images/foro.png'
+import ecommerceImage from '../../../assets/images/ecommerce.png'
+import readinglistImage from '../../../assets/images/readinglist.png'
+import chatImage from '../../../assets/images/chat.png'
 
 function Projects() {
     const {isDark} = useContext(ThemeContext)
 
     return <section id={`${routes.projects.path}`}  className={`${styles.projects} ${isDark ? styles.dark : styles.light}`}>
-        <div className={styles.box1}>
+        <article className={`${styles.card} ${styles.box1}`}>
             <h3 className={styles.order}>1</h3>
             <h4 className={styles.title}>Reading List</h4>
             <h5 className={styles.date}>20 July 2023</h5>
             <div className={styles.stack}>
                 <div className={styles.iconContainer}>
-                    <img src={JSIcon} alt="javascript icon"/>
+                    <TypescriptIcon/>
                 </div>
-                <div className={styles.iconContainer}>
-                    <img src={TSIcon} alt="typescript icon"/>
+                <div className={`${styles.iconContainer} ${styles.iconModifier}`}>
+                    <SvelteIcon/>
                 </div>
-                <div className={styles.iconContainer}>
-                    <img src={AngularIcon} alt="angular icon"/>
-                </div>
-                <div className={styles.iconContainer}>
-                    <img src={ReactIcon} alt="react icon"/>
-                </div>
-                <div className={styles.iconContainer}>
-                    <img src={CssIcon} alt="css icon"/>
-                </div>
-                <div className={styles.iconContainer}>
-                    <img src={SassIcon} alt="sass icon"/>
-                </div>
-                <div className={styles.iconContainer}>
-                    <img src={SvelteIcon} alt="svelte icon"/>
-                </div>
-                <div className={styles.iconContainer}>
-                    <img src={TailwindIcon} alt="tailwind icon"/>
-                </div>
-                <div className={styles.iconContainer}>
-                    <img src={VueIcon} alt="vue icon"/>
-                </div>
-                <div className={styles.iconContainer}>
-                    <img src={JestIcon} alt="jest icon"/>
+                <div className={`${styles.iconContainer} ${styles.iconModifier}`}>
+                    <TailwindIcon/>
                 </div>
             </div>
-        </div>
-        <div className={styles.box2}>
+            <div className={styles.imageContainer}>
+                <img className={styles.image} src={readinglistImage} alt="Reading List image" />
+            </div>
+        </article>
+        <article className={`${styles.card} ${styles.box2}`}>
             <h3 className={styles.order}>2</h3>
             <h4 className={styles.title}>Foro</h4>
             <h5 className={styles.date}>23 June 2022</h5>
-        </div>
-        <div className={styles.box3}>
+            <div className={styles.stack}>
+                <div className={styles.iconContainer}>
+                    <JavascriptIcon/>
+                </div>
+                <div className={styles.iconContainer}>
+                    <ReactIcon/>
+                </div>
+                <div className={`${styles.iconContainer} ${styles.iconModifier}`}>
+                    <CssIcon/>
+                </div>
+            </div>
+            <div className={styles.imageContainer}>
+                <img src={foroImage} alt="Foro image" />
+            </div>
+        </article>
+        <article className={`${styles.card} ${styles.box3}`}>
             <h3 className={styles.order}>3</h3>
             <h4 className={styles.title}>Chat</h4>
             <h5 className={styles.date}>11 July 2022</h5>
-        </div>
-        <div className={styles.box4}>
+            <div className={styles.stack}>
+                <div className={styles.iconContainer}>
+                    <JavascriptIcon/>
+                </div>
+                <div className={styles.iconContainer}>
+                    <ReactIcon/>
+                </div>
+                <div className={`${styles.iconContainer} ${styles.iconModifier}`}>
+                    <CssIcon/>
+                </div>
+            </div>
+            <div className={styles.imageContainer}>
+                <img src={chatImage} alt="Chat image" />
+            </div>
+        </article>
+        <article className={`${styles.card} ${styles.box4}`}>
             <h3 className={styles.order}>4</h3>
             <h4 className={styles.title}>E-commerce</h4>
             <h5 className={styles.date}>28 May 2022</h5>
-        </div>
+            <div className={styles.stack}>
+                <div className={styles.iconContainer}>
+                    <TypescriptIcon/>
+                </div>
+                <div className={styles.iconContainer}>
+                    <AngularIcon/>
+                </div>
+                <div className={`${styles.iconContainer} ${styles.iconModifier}`}>
+                    <CssIcon/>
+                </div>
+            </div>
+            <div className={styles.imageContainer}>
+                <img src={ecommerceImage} alt="ecommerce image" />
+            </div>
+        </article>
     </section>
 }
 

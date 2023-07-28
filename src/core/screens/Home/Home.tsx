@@ -13,6 +13,7 @@ function Home() {
             currently working as <span>frontend developer</span> at
             <span> Adhara</span>
         </p>
+        <span className={styles.scrollDot}></span>
     </section>
 }
 

@@ -46,6 +46,43 @@
     color: var(--contrast-orange);
 }
 
+.scrollDot {
+    position: absolute;
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--contrast-orange);
+    border-radius: 1rem;
+
+    animation: scrollAction 2s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes scrollAction {
+    0% {
+        bottom: 5rem;
+        transform: scaleY(1);
+    }
+
+    25% {
+        transform: scaleY(2);
+    }
+
+    50% {
+        bottom: 8.5rem;
+        transform: scaleY(1);
+    }
+
+    75% {
+        transform: scaleY(2);
+    }
+
+    100% {
+        bottom: 5rem;
+        transform: scaleY(1);
+    }
+}
+
 @keyframes fadein {
     0% {
         opacity: 0

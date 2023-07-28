@@ -16,22 +16,7 @@
     animation: fadein 1s ease;
 }
 
-.projects h2 {
-    position: absolute;
-
-    font-family: relieve;
-    text-transform: uppercase;
-    font-style: italic;
-    opacity: 1;
-
-    z-index: 1;
-
-    font-size: 10rem;
-
-    animation: fadein 1s ease;
-}
-
-.projects div {
+.projects .card {
     border-radius: 0.5rem;
     position: relative;
 
@@ -40,8 +25,20 @@
     width: 100%;
     height: 100%;
 
-    border: 1px solid black;
     overflow: hidden;
+
+    transition: all 1s ease;
+    cursor: pointer;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0);
+
+}
+
+.dark .card {
+    color: var(--bg-light);
+}
+
+.light .card {
+    color: var(--contrast-blue);
 }
 
 .title {
@@ -56,22 +53,12 @@
     font-size: 2.8rem;
 }
 
-.dark .title {
-    color: var(--bg-light);
-}
-
-.light .title {
-    color: var(--contrast-blue);
-}
-
 .order {
     font-family: ostrich;
-    font-size: 26rem;
-
+    font-size: 50rem;
     position: absolute;
-    bottom: -40rem;
+    bottom: -75rem;
     left: 1rem;
-    /*color: var(--bg-dark);*/
     color: var(--contrast-orange);
 }
 
@@ -81,61 +68,92 @@
     font-family: subjectivity;
 }
 
-.dark .date {
-    color: var(--bg-light);
-}
-
-.light .date {
-    color: var(--contrast-blue);
-}
-
 .stack {
     display: flex;
     align-items: center;
+    height: 5rem;
     gap: 1rem;
+
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
 }
 
 .stack .iconContainer {
     border: none;
-    width: 5rem;
+    width: 2rem;
     height: 2rem;
+
+    display: grid;
+    place-items: center;
 }
 
-.dark .stack .iconContainer {
-    fill: chocolate;
-}
-
-.light .stack .iconContainer {
-    color: chocolate;
-}
-
-.stack .iconContainer img {
+.stack .iconContainer svg {
     width: 100%;
     height: 100%;
+    object-fit: contain;
+}
+
+.stack .iconModifier svg {
+    margin-top: 0.18rem;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .box1 {
     grid-area: 1 / 1 / 8 / 4;
-    /*background-image: url("../../../assets/images/foro.png");*/
 }
 
 .box2 {
     grid-area: 1 / 4 / 5 / 6;
-    /*background-image: url("../../../assets/images/readinglist.png");*/
 }
 
 .box3 {
     grid-area: 5 / 4 / 8 / 6;
-    /*background-image: url("../../../assets/images/chat.png");*/
 }
 
 .box4 {
     grid-area: 8 / 1 / 10 / 6;
-    /*background-image: url("../../../assets/images/ecommerce.png");*/
 }
 
-.image {
+.imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    object-fit: contain;
+}
+
+
+
+.card:hover .imageContainer {
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.imageContainer img {
+    width: inherit;
+    height: inherit;
     object-fit: cover;
+}
+
+.card:hover .imageContainer img {
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.dark .box1,
+.dark  .box2,
+.dark  .box3,
+.dark  .box4 {
+    border: 1px solid var(--color-hello-light);
+}
+
+.light .box1,
+.light  .box2,
+.light  .box3,
+.light  .box4 {
+    border: 1px solid var(--bg-dark);
 }

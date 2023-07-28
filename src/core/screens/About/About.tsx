@@ -3,6 +3,7 @@ import {useContext} from "react";
 import {ThemeContext} from "../../context/theme.context.tsx";
 import personal from '../../../assets/personal.jpeg'
 import {routes} from "../../routes";
+import {JestIcon, TypescriptIcon, VueIcon} from "../../svg";
 
 function About() {
     const {isDark} = useContext(ThemeContext)
@@ -25,14 +26,23 @@ function About() {
                 <h3>30</h3>
                 <p>Years old</p>
             </div>
-            <div className={styles.info}>
+            <div className={`${styles.info} ${styles.infoExperience}`}>
                 <h3>1+</h3>
-                <p>Years of real development experience</p>
+                <p className={styles.infoLarge}>Years of real development experience with:</p>
+                <div className={styles.stack}>
+                    <div className={styles.iconContainer}>
+                        <TypescriptIcon/>
+                    </div>
+                    <div className={styles.iconContainer}>
+                        <VueIcon/>
+                    </div>
+                </div>
             </div>
             <div className={styles.info}>
                 <h3>1</h3>
                 <p>Bulldog</p>
             </div>
+
         </div>
     </section>
 }
