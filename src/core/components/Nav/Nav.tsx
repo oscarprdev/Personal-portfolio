@@ -1,7 +1,7 @@
 import { routes } from "../../routes"
 import styles from "./Nav.module.css"
 import Switch from '../Switch/Switch.tsx'
-import {useContext, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {ThemeContext} from "../../context/theme.context.tsx";
 
 function Nav() {
@@ -11,6 +11,10 @@ function Nav() {
     const listenLocation = (path: string) => {
         setLocation(path)
     }
+
+    useEffect(() => {
+        setLocation(window.location.hash.replace('#', ''))
+    }, []);
 
     return <nav className={styles.nav}>
         {

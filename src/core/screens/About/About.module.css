@@ -30,9 +30,11 @@
 .imgContainer {
     width: 15rem;
     height: 15rem;
-    border-radius: 10rem;
 
     z-index: 2;
+
+    animation: imageFloating 5s infinite;
+
 }
 
 .dark h2 {
@@ -69,9 +71,10 @@
 .imgContainer img {
     width: 100%;
     height: 100%;
-    border-radius: 10rem;
     z-index: 2;
     position: sticky;
+
+    animation: imageFloating 5s infinite;
 }
 
 .infoContainer {
@@ -145,10 +148,6 @@
     border-radius: 100%;
 }
 
-
-
-
-
 @keyframes fadein {
     0% {
         opacity: 0
@@ -156,6 +155,21 @@
     100% {
         opacity: 1;
     }
+}
+
+@keyframes imageFloating {
+    0% {
+        border-radius: 28% 72% 39% 61% / 41% 59% 41% 59%   ;
+    }
+
+    50% {
+        border-radius: 57% 43% 65% 35% / 72% 35% 65% 28% ;
+    }
+
+    100% {
+        border-radius: 28% 72% 39% 61% / 41% 59% 41% 59%   ;
+    }
+
 }
 
 

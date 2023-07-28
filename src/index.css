@@ -1,9 +1,4 @@
 @font-face {
-    font-family: 'brolimo';
-    src: url('./assets/fonts/brolimo/BROLIMO-Regular.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'subjectivity';
     src: url('./assets/fonts/subjectivity/Subjectivity-Light.otf') format('opentype');
 }
@@ -23,6 +18,11 @@
 @font-face {
     font-family: 'relieve';
     src: url('./assets/fonts/relieve/Relieve\ Demo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ostrich';
+    src: url('./assets/fonts/ostrich/OstrichSans-Bold.otf') format('opentype');
 }
 
 :root {
