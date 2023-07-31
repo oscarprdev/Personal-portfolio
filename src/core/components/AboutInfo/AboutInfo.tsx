@@ -1,5 +1,5 @@
 import styles from "../../screens/About/About.module.css";
-import {AboutData} from "../../screens/About/utils/about-data.ts";
+import { AboutData } from "../../screens/About/utils/about-data.ts";
 
 function AboutInfo() {
     return <>

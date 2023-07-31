@@ -1,21 +1,17 @@
-import styles from './Projects.module.css'
-import {useContext} from "react";
-import { ThemeContext } from "../../context/theme.context.tsx";
-import { routes } from "../../routes";
-import { ProjectsData} from "./utils/projects-data.ts";
+import { ProjectsData } from "./utils/projects-data.ts";
 import ProjectCard from "../../components/ProjectCard/ProjectCard.tsx";
+import {useContext} from "react";
+import {ThemeContext} from "../../context/theme.context.tsx";
 
 function Projects() {
-    const { isDark } = useContext(ThemeContext)
+    const {isDark} = useContext(ThemeContext)
 
-    return <section
-        id={`${routes.projects.path}`}
-        className={`${styles.projects} ${isDark ? styles.dark : styles.light}`}>
+    return <>
         {
             ProjectsData.map(project =>
-            (<ProjectCard project={project}/>))
+            (<ProjectCard project={project} isDark={isDark}/>))
         }
-    </section>
+    </>
 }
 
 export default Projects
