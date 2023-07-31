@@ -8,21 +8,19 @@
     src: url('./assets/fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
 }
 
-
-
 @font-face {
     font-family: 'cooper-hewitt';
     src: url('./assets/fonts/cooper-hewitt/CooperHewitt-Medium.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'relieve';
-    src: url('./assets/fonts/relieve/Relieve\ Demo.ttf') format('truetype');
+    font-family: 'ostrich';
+    src: url('./assets/fonts/ostrich/OstrichSans-Bold.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'ostrich';
-    src: url('./assets/fonts/ostrich/OstrichSans-Bold.otf') format('opentype');
+    font-family: 'soria';
+    src: url('./assets/fonts/soria/soria-font.ttf') format('truetype');
 }
 
 :root {
@@ -78,6 +76,10 @@ a {
 
 h1 {
     font-family: cooper-hewitt;
+}
+
+h2 {
+    font-family: '';
 }
 
 
