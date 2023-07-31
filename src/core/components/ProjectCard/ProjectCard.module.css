@@ -9,23 +9,30 @@
 
     overflow: hidden;
 
-    transition: all 0.8s ease;
     cursor: pointer;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0);
-
 }
 
 .dark {
     color: var(--bg-light);
     background-color: var(--bg-dark);
     border: 1px solid var(--color-hello-light);
+    transition: background 3s ease;
 }
 
 .light {
     color: var(--contrast-blue);
     background-color: var(--bg-light);
     border: 1px solid var(--bg-dark);
+    transition: background 0.8s ease;
 }
+
+.dark:hover {
+    background: linear-gradient(308deg, rgba(30,29,39,1) 0%, rgba(131,53,58,0.35) 90%, rgba(244,80,80,0.2) 100%);
+}
+
+.light:hover {
+    background: linear-gradient(308deg, rgba(240,240,240,1) 0%, rgba(243,120,120,0.35) 90%, rgba(244,80,80,0.2) 100%);}
 
 .title {
     position: absolute;
@@ -102,11 +109,11 @@
     grid-area: 8 / 1 / 10 / 6;
 }
 
-.hovered {
+.selected {
     grid-area: 1 / 1 / 10 / 6;
     z-index: 2;
 }
 
-.notHovered {
+.notSelected {
     opacity: 0;
 }

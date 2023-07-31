@@ -9,7 +9,7 @@ function Projects() {
     return <>
         {
             ProjectsData.map(project =>
-            (<ProjectCard project={project} isDark={isDark}/>))
+            (<ProjectCard key={project.id} project={project} isDark={isDark}/>))
         }
     </>
 }

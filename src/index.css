@@ -18,11 +18,6 @@
     src: url('./assets/fonts/ostrich/OstrichSans-Bold.otf') format('opentype');
 }
 
-@font-face {
-    font-family: 'soria';
-    src: url('./assets/fonts/soria/soria-font.ttf') format('truetype');
-}
-
 :root {
     --bg-dark: #1e1d27fc;
     --bg-light: #F0F0F0;

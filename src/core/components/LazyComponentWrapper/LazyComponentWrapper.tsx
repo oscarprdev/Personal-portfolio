@@ -1,4 +1,5 @@
 import {ReactNode, useEffect, useRef, useState} from "react";
+import styles from './Lazy.module.css'
 
 interface LazyComponentWrapperProps {
     children: ReactNode;
@@ -35,7 +36,10 @@ function LazyComponentWrapper({ children, className, id }: LazyComponentWrapperP
     }, []);
 
     return (
-        <section ref={componentRef} className={className} id={id}>
+        <section
+            ref={componentRef}
+            className={`${className} ${isVisible ? styles.visible : styles.notVisible}`}
+            id={id}>
             {isVisible && children}
         </section>
     );

@@ -1,18 +1,29 @@
 import styles from "./ProjectCard.module.css";
 import { Project, ProjectsData } from "../../screens/Projects/utils/projects-data.ts";
-import { useState } from "react";
-import ProjectCardHovered from "../ProjectCardHovered/ProjectCardHovered.tsx";
+import {useEffect, useRef, useState} from "react";
+import ProjectCardSelected from "../ProjectCardSelected/ProjectCardSelected.tsx";
 
 function ProjectCard({project, isDark}: {project: Project, isDark: boolean}) {
-    const [cardHovered, setCardHovered] = useState<Project | null>(null);
+    const [cardSelected, setCardSelected] = useState<Project | null>(null);
+    const cardRef = useRef<HTMLElement | null>(null);
 
-    const handleCardHover = (id: number) => {
-        const project = ProjectsData.find(project => project.id === id)
-        setCardHovered(project);
+    useEffect(() => {
+        document.addEventListener("click", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, []);
+
+    const handleClickOutside = (event: MouseEvent) => {
+        if (cardRef.current && !cardRef.current?.contains(event.target as HTMLElement)) {
+            setCardSelected(null);
+        }
     };
 
-    const handleCardHoverEnd = () => {
-        setCardHovered(null);
+    const selectCard = (id: number) => {
+        const project = ProjectsData.find(project => project.id === id)
+        setCardSelected(project);
     };
 
     const setCardStyles = () => {
@@ -22,17 +33,17 @@ function ProjectCard({project, isDark}: {project: Project, isDark: boolean}) {
         ${isDark
             ? styles.dark
             : styles.light} 
-        ${cardHovered?.id === project.id
-            ? styles.hovered
-            : cardHovered
-                ? styles.notHovered
+        ${cardSelected?.id === project.id
+            ? styles.selected
+            : cardSelected
+                ? styles.notSelected
                 : "" }`
     }
 
     return <article
+        ref={cardRef}
         key={project.id}
-        onMouseEnter={() => handleCardHover(project.id)}
-        onMouseLeave={handleCardHoverEnd}
+        onClick={() => selectCard(project.id)}
         className={`${setCardStyles()}`}>
         <h3 className={styles.order}>{project.id}</h3>
         <h4 className={styles.title}>{project.title}</h4>
@@ -48,7 +59,7 @@ function ProjectCard({project, isDark}: {project: Project, isDark: boolean}) {
             }
         </div>
         {
-            cardHovered && <ProjectCardHovered project={cardHovered} />
+            cardSelected && <ProjectCardSelected project={cardSelected} isDark={isDark} />
         }
     </article>
 }
