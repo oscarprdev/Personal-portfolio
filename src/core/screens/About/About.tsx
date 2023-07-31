@@ -1,9 +1,10 @@
 import styles from "./About.module.css"
-import {useContext} from "react";
-import {ThemeContext} from "../../context/theme.context.tsx";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/theme.context.tsx";
 import personal from '../../../assets/personal.jpeg'
-import {routes} from "../../routes";
-import {JestIcon, TypescriptIcon, VueIcon} from "../../svg";
+import { routes } from "../../routes";
+import { AboutData } from "./utils/about-data.ts";
+import AboutInfo from "../../components/AboutInfo/AboutInfo.tsx";
 
 function About() {
     const {isDark} = useContext(ThemeContext)
@@ -20,30 +21,7 @@ function About() {
                 }
             </div>
         </div>
-        <p className={styles.infoText}>My background comes from 6 years working as Automotive Industrial Engineer, 6 months fullstack bootcamp & 1000+ hours of self-studying since 2021</p>
-        <div className={styles.infoContainer}>
-            <div className={styles.info}>
-                <h3>30</h3>
-                <p>Years old</p>
-            </div>
-            <div className={`${styles.info} ${styles.infoExperience}`}>
-                <h3>1+</h3>
-                <p className={styles.infoLarge}>Years of real development experience with:</p>
-                <div className={styles.stack}>
-                    <div className={styles.iconContainer}>
-                        <TypescriptIcon/>
-                    </div>
-                    <div className={styles.iconContainer}>
-                        <VueIcon/>
-                    </div>
-                </div>
-            </div>
-            <div className={styles.info}>
-                <h3>1</h3>
-                <p>Bulldog</p>
-            </div>
-
-        </div>
+        <AboutInfo/>
     </section>
 }
 
