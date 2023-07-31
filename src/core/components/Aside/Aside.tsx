@@ -1,5 +1,8 @@
 import {useContext, lazy, Suspense} from "react";
 import styles from "./Aside.module.css"
+import projectStyles from '../../screens/Projects/Projects.module.css'
+import aboutStyles from '../../screens/About/About.module.css'
+import homeStyles from '../../screens/Home/Home.module.css'
 import LazyComponentWrapper from "../LazyComponentWrapper/LazyComponentWrapper.tsx";
 
 import {ThemeContext} from "../../context/theme.context.tsx";
@@ -15,21 +18,21 @@ function Aside() {
     return <aside className={styles.aside}>
         <LazyComponentWrapper
             id={`${routes.home.path}`}
-            className={`${styles.home} ${isDark ? styles.dark : styles.light}`}>
+            className={`${homeStyles.home} ${isDark ? styles.dark : styles.light}`}>
             <Suspense fallback={<div>Loading...</div>}>
                 <Home />
             </Suspense>
         </LazyComponentWrapper>
         <LazyComponentWrapper
             id={`${routes.about.path}`}
-            className={`${styles.about} ${isDark ? styles.dark : styles.light}`}>
+            className={`${aboutStyles.about} ${isDark ? styles.dark : styles.light}`}>
             <Suspense fallback={<div>Loading...</div>}>
                 <About />
             </Suspense>
         </LazyComponentWrapper>
         <LazyComponentWrapper
             id={`${routes.projects.path}`}
-            className={`${styles.projects}`}>
+            className={`${projectStyles.projects}`}>
             <Suspense fallback={<div>Loading...</div>}>
                 <Projects />
             </Suspense>

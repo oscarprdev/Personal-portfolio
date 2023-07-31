@@ -17,14 +17,14 @@
     color: var(--bg-light);
     background-color: var(--bg-dark);
     border: 1px solid var(--color-hello-light);
-    transition: background 3s ease;
+    transition: all 0.3s ease;
 }
 
 .light {
     color: var(--contrast-blue);
     background-color: var(--bg-light);
     border: 1px solid var(--bg-dark);
-    transition: background 0.8s ease;
+    transition: all 0.3s ease;
 }
 
 .dark:hover {
@@ -36,8 +36,8 @@
 
 .title {
     position: absolute;
-    bottom: -3.5rem;
-    right: 0.4rem;
+    bottom: -2.8rem;
+    right: 0.8rem;
     text-transform: uppercase;
     font-family: relieve;
 

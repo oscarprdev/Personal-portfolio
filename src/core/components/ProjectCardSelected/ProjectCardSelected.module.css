@@ -4,6 +4,8 @@
 
     display: grid;
     place-items: center;
+
+    cursor: initial;
 }
 
 .dark {
@@ -14,39 +16,123 @@
     background-color: var(--bg-light);
 }
 
-.imagesContainer {
-    width: 80%;
+.imageContainer {
+    width: 70%;
     height: 50%;
 
     display: flex;
     align-items: center;
     gap: 0.2rem;
+
 }
 
-.imagesContainer * {
-    border-radius: 1.4rem;
+.imageContainer img {
+    border-radius: 1rem;
     width: 100%;
     height: 100%;
 
     animation: floating 1.5s ease forwards;
     opacity: 0;
+
+    object-fit: cover;
+
+    border: 1px solid var(--contrast-blue);
+
+    z-index: 1;
 }
 
-.image1 {
-    background-color: red;
-    animation-delay: 0s;
+.description {
+    position: absolute;
+    width: 60%;
+    font-size: 1.5rem;
+    bottom: 3rem;
+    right: 3rem;
 }
 
-.image2 {
-    background-color: yellow;
-    animation-delay: 0.2s;
-
+.darkDescription {
+    color: var(--color-hello-light);
 }
 
-.image3 {
-    background-color: blue;
-    animation-delay: 0.3s;
+.lightDescription {
+    color: var(--color-hello-dark);
+}
 
+.navContainer {
+    position: absolute;
+    top: 5rem;
+    left: 15%;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navContainer a {
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.darkBtn {
+    color: var(--color-hello-light);
+    border: 1px solid var(--color-hello-light);
+}
+
+.darkBtn:hover {
+    background-color: var(--color-hello-light);
+    color: var(--contrast-blue)
+}
+
+.lightBtn {
+    color: var(--color-hello-dark);
+    border: 1px solid var(--color-hello-dark);
+}
+
+.lightBtn:hover {
+    background-color: var(--color-hello-light);
+}
+
+.viewBtn {
+    color: var(--color-hello-light);
+    background-color: var(--contrast-orange);
+    border: none;
+}
+
+.darkViewBtn:hover {
+    color: var(--contrast-blue);
+    background-color: var(--color-hello-light);
+}
+
+.lightViewBtn:hover {
+    background-color: var(--contrast-blue);
+}
+
+.dots {
+    display: flex;
+    flex-wrap: wrap;
+    width: 7rem;
+    gap: 1rem;
+
+    position: absolute;
+    top: 10rem;
+    right: 6rem;
+
+    z-index: 0;
+}
+
+.dots span {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.dotsDark span {
+    background-color: var(--color-hello-light);
+}
+
+.dotsLight span {
+    background-color: var(--contrast-orange);
 }
 
 @keyframes floating {
@@ -55,7 +141,7 @@
     }
 
     70% {
-        transform: translateY(-50px);
+        transform: translateY(-10px);
     }
 
     100% {
