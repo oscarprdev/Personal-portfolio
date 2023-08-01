@@ -1,0 +1,52 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 80%;
+    height: fit-content;
+    opacity: 0;
+
+    animation: appearing 0.5s ease forwards;
+}
+
+.post h3 {
+    color: var(--contrast-orange);
+    text-transform: uppercase;
+    font-size: 2rem;
+
+    line-height: 0.1rem;
+}
+
+.post h4 {
+    line-height: 0.3rem;
+    font-family: cooper-hewitt;
+}
+
+.post p {
+    font-size: 1.3rem;
+}
+
+.postInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.postInfo span {
+    content: '';
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 5rem;
+    background-color: var(--contrast-orange);
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

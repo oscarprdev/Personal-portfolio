@@ -54,7 +54,7 @@ export const ProjectsData: Project[] = [
         title: 'Forum',
         date: '23 June 2022',
         image: foroImage,
-        description: 'A forum app where users can create and comment topics and there is a rewarding usage system allowing the user to update its profile avatar',
+        description: 'A forum app where users can create and comment topics',
         links: {
             code: 'https://github.com/oscarprdev/REACT--Foro_social',
             app: 'https://react-foro.netlify.app'

@@ -1,0 +1,45 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1.5rem;
+
+    padding: 10rem;
+
+    opacity: 1;
+
+    width: 100%;
+    height: fit-content;
+
+    position: relative;
+
+    animation: fadein 1s ease;
+}
+
+.title {
+    font-size: 4rem;
+    line-height: 0;
+}
+
+.darkTitle {
+    color: var(--color-hello-light)
+}
+
+.lightTitle {
+    color: var(--contrast-blue);
+}
+
+.postsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1.5rem;
+
+    width: 85%;
+    height: 100%;
+}
+
+
+
