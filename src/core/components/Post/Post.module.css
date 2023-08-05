@@ -15,7 +15,12 @@
     text-transform: uppercase;
     font-size: 2rem;
 
-    line-height: 0.1rem;
+    cursor: pointer;
+    transition: color .5s ease;
+}
+
+.post h3:hover {
+    color: var(--contrast-blue)
 }
 
 .post h4 {

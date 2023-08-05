@@ -3,19 +3,22 @@ export interface PostInfo {
     date: string,
     time: string,
     description: string
+    href?: string
 }
 
 export const PostInfo: PostInfo[] = [
     {
-        title: 'Title of some awesome post',
-        date: '01 August 2023',
-        time: '10 min read',
-        description: 'Description of some awesome post'
+        title: 'Frontend state management with clean architecture',
+        date: '03 August 2023',
+        time: '20 min read',
+        description: 'Manage a global frontend state using clean architecture and without any external libraries step-by-step',
+        href: 'https://dev.to/oscarprdev/frontend-state-management-with-clean-architecture-22d8'
     },
     {
-        title: 'Title of some awesome post',
-        date: '01 August 2023',
+        title: 'Intersection Observer API & Lazy loading in REACT',
+        date: '05 August 2023',
         time: '10 min read',
-        description: 'Description of some awesome post'
+        description: 'How to create an intersection observer wrapper component in react to manage the components lazy loading',
+        href: "https://dev.to/oscarprdev/intersection-observer-api-lazy-loading-in-react-44"
     }
 ]

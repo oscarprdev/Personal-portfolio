@@ -10,7 +10,7 @@ function Blog() {
     return <>
         <h2 className={`${styles.title} ${isDark ? styles.darkTitle : styles.lightTitle}`}>BLOG</h2>
         <div className={styles.postsContainer}>
-            {PostInfo.map(post => (<Post post={post} />))}
+            {PostInfo.map((post, i)=> (<Post key={`post-${i}`} post={post} index={i} />))}
         </div>
     </>
 }
