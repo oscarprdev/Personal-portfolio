@@ -5,7 +5,7 @@ import { ThemeContext } from "../../context/theme.context.tsx";
 function Switch() {
     const {isDark, toggleTheme} = useContext(ThemeContext)
 
-    return <div className={`${styles.switch} ${isDark ? styles.switchDark : styles.switchLight}`} onClick={e => toggleTheme()}>
+    return <div className={`${styles.switch} ${isDark ? styles.switchDark : styles.switchLight}`} onClick={() => toggleTheme}>
         <span className={`${isDark ? styles.dark : styles.light}`}></span>
     </div>
 }   

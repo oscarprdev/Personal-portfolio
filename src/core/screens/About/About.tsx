@@ -15,7 +15,7 @@ function About() {
             </div>
             <div className={`${styles.dots} ${isDark ? styles.dotsDark : styles.dotsLight}`}>
                 {
-                    Array(16).fill('').map((num, id) => (<span key={id}></span>))
+                    Array(16).fill('').map((_, id) => (<span key={id}></span>))
                 }
             </div>
         </div>

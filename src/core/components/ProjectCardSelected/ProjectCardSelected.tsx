@@ -23,7 +23,7 @@ function ProjectCardSelected({project, isDark}: {project: Project, isDark: boole
         <p className={`${styles.description} ${isDark ? styles.darkDescription : styles.lightDescription}`}>{project.description}</p>
         <div className={`${styles.dots} ${isDark ? styles.dotsDark : styles.dotsLight}`}>
             {
-                Array(16).fill('').map((num, id) => (<span key={id}></span>))
+                Array(16).fill('').map((_, id) => (<span key={id}></span>))
             }
         </div>
     </article>

@@ -23,7 +23,9 @@ function ProjectCard({project, isDark}: {project: Project, isDark: boolean}) {
 
     const selectCard = (id: number) => {
         const project = ProjectsData.find(project => project.id === id)
-        setCardSelected(project);
+        if (project) {
+            setCardSelected(project);
+        }
     };
 
     const setCardStyles = () => {

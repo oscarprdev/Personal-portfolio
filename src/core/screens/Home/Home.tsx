@@ -1,10 +1,6 @@
 import styles from "./Home.module.css"
-import {useContext} from "react";
-import {ThemeContext} from "../../context/theme.context.tsx";
-import {routes} from "../../routes";
 
 function Home() {
-
     return <>
         <h2 className={styles.title}>Hello</h2>
         <p className={styles.textContainer}>
