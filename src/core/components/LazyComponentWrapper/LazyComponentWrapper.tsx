@@ -1,5 +1,6 @@
-import {ReactNode, useEffect, useRef, useState} from "react";
+import {ReactNode, useContext, useEffect, useRef, useState} from "react";
 import styles from './Lazy.module.css'
+import {LocationContext} from "../../context/location.context.tsx";
 
 interface LazyComponentWrapperProps {
     children: ReactNode;
@@ -8,6 +9,8 @@ interface LazyComponentWrapperProps {
 }
 
 function LazyComponentWrapper({ children, className, id }: LazyComponentWrapperProps) {
+    const {updateLocation} = useContext(LocationContext)
+
     const [isVisible, setIsVisible] = useState(false);
     const componentRef = useRef<HTMLElement | null>(null);
 
@@ -17,8 +20,10 @@ function LazyComponentWrapper({ children, className, id }: LazyComponentWrapperP
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         setIsVisible(true);
+                        updateLocation(entry.target.id)
                         observer.unobserve(entry.target);
                     }
+
                 });
             },
             { threshold: 0.5 } as IntersectionObserverInit
@@ -33,7 +38,7 @@ function LazyComponentWrapper({ children, className, id }: LazyComponentWrapperP
                 observer.unobserve(componentRef.current!);
             }
         };
-    }, []);
+    }, [updateLocation]);
 
     return (
         <section

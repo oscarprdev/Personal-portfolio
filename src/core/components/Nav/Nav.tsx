@@ -1,28 +1,32 @@
 import { routes } from "../../routes"
 import styles from "./Nav.module.css"
 import Switch from '../Switch/Switch.tsx'
-import {useContext, useEffect, useState} from "react";
+import {useContext, useEffect} from "react";
 import {ThemeContext} from "../../context/theme.context.tsx";
+import {LocationContext} from "../../context/location.context.tsx";
 
 function Nav() {
     const {isDark} = useContext(ThemeContext)
-    const [location, setLocation] = useState('')
+    const {location, updateLocation} = useContext(LocationContext)
 
     const listenLocation = (path: string) => {
-        setLocation(path)
+        updateLocation(path)
     }
 
     useEffect(() => {
-        setLocation(window.location.hash.replace('#', ''))
+        updateLocation(window.location.hash.replace('#', ''))
     }, []);
+
+    const isLocationActive = (path: string) => {
+        return location === path || location === "" && path === '/'
+    }
 
     return <nav className={styles.nav}>
         {
         Object.values(routes).map(value => {
             return <a href={`#${value.path}`} key={value.path} onClick={() => listenLocation(value.path)}>
                     <h1
-                        className={`${location === `${value.path}`
-                        && styles.navActive} ${isDark ? styles.dark : styles.light}`}>
+                        className={`${isLocationActive(value.path) ? styles.navActive : ''} ${isDark ? styles.dark : styles.light}`}>
                         {value.label}
                     </h1>
                 </a>
