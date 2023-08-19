@@ -4,6 +4,8 @@
     align-items: start;
     justify-content: start;
     gap: 2rem;
+    overflow: hidden;
+
 
     padding: 7rem 10rem;
 
