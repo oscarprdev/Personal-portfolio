@@ -61,7 +61,7 @@
     .nav {
         position: fixed;
         bottom: -3rem;
-        right: 2rem;
+        left: 2rem;
         width: fit-content;
     }
 
