@@ -18,6 +18,11 @@
     src: url('./assets/fonts/ostrich/OstrichSans-Bold.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'ostrich-medium';
+    src: url('./assets/fonts/ostrich/OstrichSans-Medium.otf') format('opentype');
+}
+
 :root {
     --bg-dark: #1e1d27fc;
     --bg-light: #F0F0F0;

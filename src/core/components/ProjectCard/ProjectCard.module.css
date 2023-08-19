@@ -129,12 +129,11 @@
     }
 
     .order {
-        font-family: ostrich, sans-serif;
         font-size: 30rem;
-        position: absolute;
         bottom: -45rem;
+        font-weight: 100;
         left: 1rem;
-        color: var(--contrast-orange);
+        font-family: ostrich, sans-serif;
     }
 
     .iconContainer {
