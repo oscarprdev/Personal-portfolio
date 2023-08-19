@@ -18,5 +18,12 @@
     color: var(--color-hello-light);
 }
 
+@media screen and (max-width: 600px) {
+    .aside {
+        width: 100vw;
+    }
+}
+
+
 
 

@@ -1,6 +1,6 @@
 .switch {
-    position: absolute;
-    top: 1.3rem;
+    position: fixed;
+    top: 2rem;
     right: 2rem;
     width: 5rem;
     height: 2.5rem;
@@ -21,6 +21,9 @@
 .switch span {
     position: absolute;
 
+    display:grid;
+    place-items: center;
+
     width: 2rem;
     height: 2rem;
 
@@ -39,4 +42,26 @@
 .light {
     background-color: var(--contrast-yellow);
     transform: translateX(2.5rem);
+}
+
+@media screen and (max-width: 600px) {
+    .switch {
+        top: 1.3rem;
+        right: 2rem;
+        width: 4rem;
+        height: 2rem;
+    }
+
+    .switch span {
+        width: 1.7rem;
+        height: 1.7rem;
+        top: 0.11rem;
+    }
+
+    .light {
+        width: 1.6rem !important;
+        height: 1.6rem !important;
+        top: 0.2rem !important;
+        transform: translateX(1.95rem);
+    }
 }

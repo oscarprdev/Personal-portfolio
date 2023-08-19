@@ -4,11 +4,20 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem 2rem;
-    position: relative;
+    position: absolute;
 }
 
 .header h1 {
     display: none;
+    width: 50vw;
+}
+
+.titleDark {
+    color: var(--bg-light);
+}
+
+.titleLight {
+    color: var(--bg-dark);
 }
 
 .header::after {
@@ -33,10 +42,44 @@
 }
 
 @keyframes moveRight {
-    from {
-        left: -50px; /* Adjust the initial position off the screen as needed */
+    0% {
+        opacity: 0;
+        left: -50px;
     }
-    to {
+    10% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
         left: 5rem;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .header::after {
+        width: 2rem;
+        height: 2rem;
+        top: 1.5rem;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    @keyframes moveRight {
+        0% {
+            opacity: 0;
+            left: -50px;
+        }
+        10% {
+            opacity: 0;
+
+        }
+        100% {
+            opacity: 1;
+            left: 3.5rem;
+        }
     }
 }

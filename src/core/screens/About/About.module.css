@@ -15,14 +15,6 @@
     animation: fadein 1s ease;
 }
 
-.infoText {
-    max-width: 50%;
-    position: inherit;
-    z-index: 2;
-
-    font-size: 1.2rem;
-}
-
 .head {
     position: relative;
 }
@@ -65,63 +57,6 @@
     position: sticky;
 
     animation: imageFloating 5s infinite;
-}
-
-.infoContainer {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    position: relative;
-}
-
-.info h3 {
-    font-size: 2.5rem;
-    line-height: 0;
-    color: var(--contrast-orange);
-}
-
-.info p {
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.infoLarge {
-    max-width: 80%;
-}
-
-.infoExperience {
-    margin-top: 1.3rem;
-}
-
-.infoContainer .stack {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-
-    position: absolute;
-    bottom: -3rem;
-}
-
-.infoContainer .stack .iconContainer {
-    border: none;
-    width: 2.5rem;
-    height: 2.5rem;
-
-    display: grid;
-    place-items: center;
-}
-
-.infoContainer .stack .iconContainer svg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 .dots {
@@ -193,8 +128,39 @@
     100% {
         border-radius: 28% 72% 39% 61% / 41% 59% 41% 59%   ;
     }
-
 }
+
+
+@media screen and (max-width: 600px) {
+    .imgContainer {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .title {
+        font-size: 4rem;
+        top: 27vh;
+    }
+
+    .dots {
+        display: flex;
+        flex-wrap: wrap;
+        width: 5rem;
+        gap: 1rem;
+
+        position: absolute;
+        top: 0;
+        left: -3rem;
+
+        z-index: 0;
+    }
+
+    .dots span {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+}
+
 
 
 

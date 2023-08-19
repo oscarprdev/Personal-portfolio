@@ -49,6 +49,23 @@
     animation-timing-function: ease-in-out;
 }
 
+.socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    top: 34rem;
+    z-index: 2;
+}
+
+.icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: var(--contrast-orange);
+}
 @keyframes scrollAction {
     0% {
         bottom: 5rem;
@@ -80,6 +97,31 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home {
+        height: 100vh;
+        align-items: start;
+    }
+
+    .title {
+        font-size: 7rem;
+    }
+
+    .textContainer {
+        max-width: 90%;
+        font-size: 1.5rem;
+        margin-top: 25vh;
+    }
+
+    .scrollDot {
+        display: none;
+    }
+
+    .socialIcons {
+        top: 40vh;
     }
 }
 

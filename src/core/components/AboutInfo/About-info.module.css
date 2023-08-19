@@ -1,0 +1,94 @@
+.infoText {
+    max-width: 50%;
+    position: inherit;
+    z-index: 2;
+
+    font-size: 1.2rem;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.info h3 {
+    font-size: 2.5rem;
+    line-height: 0;
+    color: var(--contrast-orange);
+}
+
+.info p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.infoLarge {
+    max-width: 80%;
+}
+
+.infoExperience {
+    margin-top: 1.3rem;
+}
+
+.infoContainer .stack {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    position: absolute;
+    bottom: -3rem;
+}
+
+.infoContainer .stack .iconContainer {
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    display: grid;
+    place-items: center;
+}
+
+.infoContainer .stack .iconContainer svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 600px) {
+    .infoText {
+        max-width: 80%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .info h3 {
+        font-size: 2rem;
+    }
+
+    .info p {
+        font-size: 0.9rem;
+    }
+
+    .infoContainer {
+        max-width: 90vw;
+        margin-top: -3rem;
+    }
+
+    .infoContainer .stack .iconContainer {
+        margin-top: -4rem;
+    }
+
+    .infoContainer .stack .iconContainer {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}

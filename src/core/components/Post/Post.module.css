@@ -6,6 +6,7 @@
     width: 80%;
     height: fit-content;
     opacity: 0;
+    margin-top: 1rem;
 
     animation: appearing 0.5s ease forwards;
 
@@ -27,7 +28,7 @@
 
 .post h4 {
     line-height: 0.3rem;
-    font-family: cooper-hewitt;
+    font-family: cooper-hewitt, sans-serif;
 }
 
 .post p {
@@ -55,5 +56,28 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .post {
+        width: 90vw;
+    }
+
+    .post h3 {
+        font-size: 1.2rem;
+    }
+
+    .post h4 {
+        font-size: 0.8rem;
+    }
+
+    .post p {
+        font-size: 1rem;
+    }
+
+    .postInfo span {
+        width: 0.6rem;
+        height: 0.6rem;
     }
 }

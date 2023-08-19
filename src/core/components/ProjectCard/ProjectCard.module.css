@@ -116,3 +116,40 @@
 .notSelected {
     opacity: 0;
 }
+
+@media screen and (max-width: 600px) {
+    .card {
+        height: 55vh;
+    }
+
+    .title {
+        bottom: -2rem;
+        right: 0.8rem;
+        font-size: 1.6rem;
+    }
+
+    .order {
+        font-family: ostrich, sans-serif;
+        font-size: 30rem;
+        position: absolute;
+        bottom: -45rem;
+        left: 1rem;
+        color: var(--contrast-orange);
+    }
+
+    .iconContainer {
+        border: none;
+        width: 1.3rem;
+        height: 1.3rem;
+
+        display: grid;
+        place-items: center;
+    }
+
+    .iconModifier svg {
+        margin-top: 0.18rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0;
+    }
+}

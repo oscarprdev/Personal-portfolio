@@ -5,12 +5,12 @@ import {
   SvelteIcon,
   TailwindIcon,
   TypescriptIcon,
-} from "../../../svg";
+} from "../../../svg/stack-icons";
 import chatImage from "../../../../assets/images/chat.png";
 import foroImage from "../../../../assets/images/foro.png";
 import readinglistImage from "../../../../assets/images/readinglist.png";
 import atraImage from "../../../../assets/images/atra.png";
-import VueIcon from "../../../svg/VueIcon.tsx";
+import VueIcon from "../../../svg/stack-icons/VueIcon.tsx";
 
 export interface Project {
   id: number;
@@ -106,7 +106,7 @@ export const ProjectsData: Project[] = [
     title: "Chat",
     date: "11 July 2022",
     image: chatImage,
-    description: "A basic chat app done with sockets.io",
+    description: "A real time chat app done with sockets.io",
     links: {
       code: "https://github.com/oscarprdev/REACT-Chat-Socket",
       app: "https://react-chat-socket-oscar.netlify.app/",
