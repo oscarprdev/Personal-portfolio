@@ -30,7 +30,7 @@
     width: 100%;
     height: 100%;
 
-    animation: floating 1.5s ease forwards;
+    animation: floating 0.7s ease forwards;
     opacity: 0;
 
     object-fit: cover;
@@ -149,10 +149,12 @@
 @keyframes floating {
     0% {
         transform: translateY(150px);
+        opacity: 0;
     }
 
     70% {
         transform: translateY(-10px);
+        opacity: 1;
     }
 
     100% {
